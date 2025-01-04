@@ -1,2 +1,0 @@
-# thenormalchel.github.io
-Lol
