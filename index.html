@@ -95,15 +95,37 @@
             opacity: 0.7; /* Полупрозрачный текст */
             font-size: 1.2em; /* Размер шрифта */
         }
+
+        .typing {
+            border-right: 2px solid white;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
 
-    <h1>MitqyHub Reborn</h1> <!-- Заголовок над кнопкой -->
+    <h1 id="header" class="typing"></h1> <!-- Заголовок над кнопкой -->
 
     <button class="button-85" role="button" onclick="window.location.href='https://lootdest.org/s?ai4TWwsz'">Get Key :3</button> <!-- Перенаправление при нажатии -->
 
     <div class="footer-text">https://t.me/mitqyhub</div> <!-- Полупрозрачный текст -->
+
+    <script>
+        const text = "MitqyHub Reborn";
+        const header = document.getElementById('header');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                header.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100); // Задержка между символами
+            }
+        }
+
+        // Запускаем печать текста через 2 секунды
+        setTimeout(type, 0);
+    </script>
 
 </body>
 </html>
