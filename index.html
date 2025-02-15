@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MitqyHub</title>
+    <title>M1qyzHub</title>
     <style>
         @font-face {
             font-family: 'CustomFont';
-            src: url('font.ttf') format('truetype'); /* Подключите ваш шрифт */
+            src: url('font.ttf') format('truetype');
         }
 
         body {
-            background-color: black; /* Фоновый цвет черный */
+            background-color: black;
             display: flex;
-            flex-direction: column; /* Вертикальное расположение элементов */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Занять всю высоту экрана */
-            margin: 0; /* Убрать отступы */
-            color: white; /* Цвет текста белый */
-            font-family: 'CustomFont', sans-serif; /* Установка шрифта */
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: 'CustomFont', sans-serif;
         }
 
         .button-85 {
@@ -35,6 +35,7 @@
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
+            margin: 0 10px; /* Добавим отступы между кнопками */
         }
 
         .button-85:before {
@@ -91,27 +92,44 @@
 
         .footer-text {
             position: absolute;
-            bottom: 20px; /* Расположение текста снизу */
-            opacity: 0.7; /* Полупрозрачный текст */
-            font-size: 1.2em; /* Размер шрифта */
+            bottom: 20px;
+            opacity: 0.7;
+            font-size: 1.2em;
         }
 
         .typing {
             border-right: 2px solid white;
             display: inline-block;
         }
+
+        .script-text {
+            display: none;
+            margin-top: 20px;
+            transition: opacity 0.5s;
+            opacity: 0;
+        }
+
+        .show {
+            display: block;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
 
-    <h1 id="header" class="typing"></h1> <!-- Заголовок над кнопкой -->
+    <h1 id="header" class="typing"></h1>
 
-    <button class="button-85" role="button" onclick="window.location.href='https://lootdest.org/s?ai4TWwsz'">Get Key :3</button> <!-- Перенаправление при нажатии -->
+    <div>
+        <button class="button-85" role="button" onclick="window.location.href='https://lootdest.org/s?ai4TWwsz'">Get Key :3</button>
+        <button class="button-85" role="button" onclick="window.location.href='https://raw.githubusercontent.com/thenormalchel/thenormalchel.github.io/refs/heads/main/m1qyzhubscripts.txt'">Get scr1pt :P</button>
+    </div>
 
-    <div class="footer-text">https://t.me/mitqyhub</div> <!-- Полупрозрачный текст -->
+    <div id="scriptText" class="script-text">loadstring</div>
+
+    <div class="footer-text">Telegram | https://t.me/mitqyhub</div>
 
     <script>
-        const text = "MitqyHub Reborn";
+        const text = "New era of scripts | M1qyzHub";
         const header = document.getElementById('header');
         let index = 0;
 
@@ -119,11 +137,15 @@
             if (index < text.length) {
                 header.textContent += text.charAt(index);
                 index++;
-                setTimeout(type, 100); // Задержка между символами
+                setTimeout(type, 100);
             }
         }
 
-        // Запускаем печать текста через 2 секунды
+        function showScript() {
+            const scriptText = document.getElementById('scriptText');
+            scriptText.classList.add('show');
+        }
+
         setTimeout(type, 0);
     </script>
 
