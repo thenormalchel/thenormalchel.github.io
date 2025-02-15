@@ -1,1 +1,1 @@
-M1qyzHub | loadstring(game:HttpGet(''))()
+M1qyzHub | loadstring(game:HttpGet('https://raw.githubusercontent.com/thenormalchel/RbxScripts/refs/heads/main/m1qyzhub.lua'))()
